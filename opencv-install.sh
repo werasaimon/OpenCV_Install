@@ -15,11 +15,19 @@ mkdir ~/opencv_build && cd ~/opencv_build
 git clone https://github.com/opencv/opencv.git 
 git clone https://github.com/opencv/opencv_contrib.git 
 
-cd opencv && mkdir build && cd build 
+cd ~/opencv_build/opencv && mkdir build && cd ~/opencv_build/opencv/build 
 
 
-cmake -D CMAKE_BUILD_TYPE=RELEASE \ -D CMAKE_INSTALL_PREFIX=/usr/local \ -D INSTALL_C_EXAMPLES=ON \ -D OPENCV_GENERATE_PKGCONFIG=ON \ -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \ -D WITH_GSTREAMER=ON \ -D WITH_QT=ON \ -D WITH_OPENGL=ON \ -D WITH_QT=ON \  -D WITH_TBB=ON  \ -D BUILD_EXAMPLES=ON ..
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D INSTALL_C_EXAMPLES=ON \
+-D WITH_OPENGL=ON \
+-D WITH_TBB=ON \
+-D WITH_GSTREAMER=ON \
+-D OPENCV_GENERATE_PKGCONFIG=ON \
+-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
+-D BUILD_EXAMPLES=ON ..
 
 make -j$(nproc)
 sudo make install
-sudo ldconfig
+pkg-config --cflags opencv4
