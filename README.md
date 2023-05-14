@@ -1,4 +1,4 @@
-# OpenCV_Install for Ubnutu-20.04 / Linux
+# OpenCV_Install for Ubunutu-20.04 / Linux
 OpenCV C++ Bash Script Install
 
 ```bash
