@@ -1,7 +1,7 @@
 # OpenCV_Install
 OpenCV C++ Bash Script Install
 
-/,,,
+```bash
 
  sudo apt-get install $(apt-cache --names-only search ^gstreamer1.0-* | awk '{print $1}' | grep -v gstreamer1.0-hybris | grep -v gstreamer1.0-python3-dbg-plugin-loader)
 
@@ -36,4 +36,5 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 make -j$(nproc)
 sudo make install
 pkg-config --cflags opencv4
-,,,/
+
+```
