@@ -13,7 +13,7 @@ OpenCV C++ Bash Script Install
 #libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev \  
 
 
-sudo apt install build-essential cmake git pkg-config libgtk-3-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev  libatlas-base-dev libtbb2 libtbb-dev  libopenexr-dev  python3-dev python3-numpy -y
+sudo apt install build-essential cmake git pkg-config libgtk-3-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev  libatlas-base-dev libtbb2 libtbb-dev  libopenexr-dev  python3-dev python3-numpy libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev -y
 
 
 mkdir ~/opencv_build && cd ~/opencv_build 
